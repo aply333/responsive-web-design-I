@@ -204,7 +204,7 @@ nav a {
 			}
 			.main .front-text a{
 				width: auto;
-				padding:10px 20px 10px 20px;
+				padding:5px 20px 5px 20px;
 				text-align: center;
 				color: black;
 				border: solid black 1px;
@@ -227,7 +227,7 @@ nav a {
 	display: flex;
 	justify-content: space-evenly;
 }
-	.serv-prod-vis{
+	.serv-prod-vis .tetri{
 		margin: 0 5px;
 		padding: 15px 10px;
 		
