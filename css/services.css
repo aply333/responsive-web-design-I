@@ -172,7 +172,7 @@ header {
 nav a {
   /* display: inline-block;
 	float: left; */
-  color: black;
+  color: darkgray;
   text-decoration: none;
   margin: 5px 5px 5px;
   padding: 10px;
@@ -275,7 +275,7 @@ footer{
 		}
 			header nav a{
 				text-align: center;
-				border-bottom: solid black 1px;
+				border-bottom: solid darkgray 1px;
       }
   .container .opt-services{
     flex-flow: column;
