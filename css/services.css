@@ -1,0 +1,292 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* Notes for next standup: Loving how with flex I have been able to clean and simplify my code 
+	no bs with fudging mechanics to align things just straight forward, I want this and it works
+	also realized I was not using the section tag enought, too many divs were used, so now I 
+	seperated each section of the page to use different parts of the page.
+ */
+ /*
+	-Eddited logo for header in Photoshop--- it irked me!
+ */
+
+header {
+  display: flex;
+  margin: 10px auto;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 750px;
+  /* position: fixed; ---- moving bar gave me issues*/
+}
+
+nav a {
+  /* display: inline-block;
+	float: left; */
+  color: darkgray;
+  text-decoration: none;
+  margin: 5px 5px 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+ul{
+    list-style-type: square;
+}
+.container {
+  margin: 0 auto;
+  width: 750px;
+}
+.services-header-img{
+    align-self: center;
+    width:750px;
+    margin:15px auto;
+    padding: 15px;
+}
+.services{
+    margin:15px;
+    margin-bottom:25px;
+    padding-bottom:10px;
+}
+.opt-services{
+    display:flex;
+    flex-flow:wrap;
+    margin: 5px;
+    justify-content:space-between;
+}
+    .opt-services .opt{
+        width: 47%;
+        margin:15px auto;
+        padding:25px;
+        border: 1px solid black;
+        background: rgb(247, 245, 245);
+    }
+    .opt-services .opt p{
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+    .opt-services .opt a{
+        margin-top:5px;
+        margin-bottom:35px;
+        padding:5px 10px 5px;
+        border: black solid 1px;
+        font-style:none;
+        color: black;
+    }
+.about-serv{
+    display:flex;
+    justify-content: space-between
+    margin 5px;
+}
+    .about-serv .facts{
+        margin: 25px;
+        width: 50%;
+    }
+        .about-serv .facts ul li{
+            margin:15px;
+        }
+    .about-serv img{
+        width: 49%;
+        height: 49%;
+    }
+footer{
+    margin: 20px auto 15px;
+    padding:30px;
+    text-align: center;
+}
+/* Tablet Break at 768px */
+@media(max-width:768px){
+    header{
+      flex-flow: column-reverse;
+      width: 95%;
+    }
+    header img{
+      margin-bottom:15px;
+    }
+    header nav{
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+    .container{
+      width: auto;
+    }
+      .container .services-header-img{
+        width:100%;
+      }
+}
+/* Phone Break at 500px */
+@media(max-width:500px){
+  header{
+		width: 100%;
+		margin-bottom:5px;
+		padding-bottom:2px;
+	}
+		header nav{
+			flex-flow:column;
+		}
+			header nav a{
+				text-align: center;
+				border-bottom: solid darkgray 1px;
+      }
+  .container .opt-services{
+    flex-flow: column;
+   }
+   .container .opt-services .opt{
+     width: auto;
+   }
+  .services-info-img{
+    display: none;
+  }
+  .about-serv .facts{
+    width: auto;
+  }
+}
